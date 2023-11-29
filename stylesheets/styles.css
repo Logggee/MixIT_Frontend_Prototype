@@ -15,3 +15,8 @@ body{
 .card{
     --bs-card-bg: #212529;
 }
+
+.list-group-item{
+    color: white;
+    border-color: #E2AE5A;
+}
