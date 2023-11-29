@@ -9,6 +9,36 @@
 </head>
 
 <body class="vh-100 position-relative">
+
+    <div class="modal" tabindex="-1" id="modalChangeMix">
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark">
+            <div class="modal-header">
+              <h5 class="modal-title text-light">Bestellung bearbeiten</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="text-light">Mischverhältniss anpassen:</p>
+              <div class="input-group mb-3">
+                <span class="input-group-text text-light bg-dark">Cola</span>
+                <input type="text" class="form-control bg-dark text-end text-light" aria-label="Amount (to the nearest dollar)" value="80">
+                <span class="input-group-text bg-dark text-light">%</span>
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text bg-dark text-light">Havana Club</span>
+                <input type="text" class="form-control bg-dark text-end text-light" aria-label="Amount (to the nearest dollar)" value="20">
+                <span class="input-group-text bg-dark text-light">%</span>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
     <nav class="navbar navbar-expand-md navbar-light navbar-transparent  d-flex justify-content-center">
         <div class="container-fluid">
             <a class="navbar-brand ms-5 ps-5" href="index.html">
@@ -71,7 +101,7 @@
                   <strong>Mischung:</strong><br>
                   Cola: 80%<br>
                   Havana Club: 20%<br>
-                  <button type="button" class="btn btn-warning btn-md my-3 me-3">Bestellung bearbeiten</button>
+                  <button type="button" class="btn btn-warning btn-md my-3 me-3 " data-bs-toggle="modal" data-bs-target="#modalChangeMix">Bestellung bearbeiten</button>
                   <button type="button" class="btn btn-danger btn-md my-3">Bestellung löschen</button>
                 </div>
                 <span class="badge bg-secondary rounded-pill">Bestellt: 14:25:22></span>

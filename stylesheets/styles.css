@@ -24,3 +24,9 @@ body{
 .progress-bar{
     --bs-progress-bar-bg: #eca533;
 }
+
+#saveChanges{
+    --bs-btn-bg: #f1af44;
+    --bs-btn-border-color: #f1af44;
+    --bs-btn-hover-bg: #ff9d00;
+}
