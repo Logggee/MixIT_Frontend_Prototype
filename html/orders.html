@@ -54,9 +54,10 @@
                     
                     <div class="row w-100 mt-3">
                         <div class="col-12">
-                            <strong>Bestellung wird aktuell zubereitet:</strong> 
+                            <strong>Aktueller Vorgang:<span class="ms-2">Becher wird eingestellt</span></strong>
+                            <p><strong>Bestellung wird aktuell zubereitet:</strong> </p>
                             <div class="progress mt-1" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar" style="width: 50%">50%</div>
+                                <div class="progress-bar" style="width: 0%">0%</div>
                             </div>
                             <button type="button" class="btn btn-danger btn-md my-3">Zubereitung abbrechen</button>
                         </div>
@@ -92,5 +93,28 @@
     </div>
 
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        setInterval(function() {
+            incrementProgress();
+        }, 100);
+    
+        function incrementProgress() {
+            var progressBar = document.getElementsByClassName("progress-bar")[0];
+            var currentWidth = parseFloat(progressBar.style.width) || 0;
+    
+            if (currentWidth < 100) 
+            {
+                currentWidth += 1;
+            } 
+
+            else 
+            {
+                currentWidth = 0;
+            }
+    
+            progressBar.style.width = currentWidth + "%";
+            progressBar.innerHTML = currentWidth + "%";
+        }
+    </script> 
 </body>
 </html>

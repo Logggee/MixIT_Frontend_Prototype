@@ -20,3 +20,7 @@ body{
     color: white;
     border-color: #E2AE5A;
 }
+
+.progress-bar{
+    --bs-progress-bar-bg: #eca533;
+}
